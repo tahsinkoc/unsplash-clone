@@ -13,7 +13,7 @@ function Navbar() {
         scrollPoint.current.scrollLeft += el
     }
     return (
-        <div className='w-full fixed top-0'>
+        <div className='w-full sticky z-50 top-0 bg-white'>
             <div className="w-full flex justify-between px-[1rem] py-[.7rem] items-center">
                 <div className='flex items-center lg:w-[65%] w-full'>
                     <div className='h-[2.7rem]'>
@@ -66,33 +66,33 @@ function Navbar() {
             <div className='w-full bg-white px-[1rem] py-[.7rem]'>
                 <nav className='flex items-center'>
                     <a className='text-[#767676] py-[.5rem] border-r-2 pr-4' href="#">Editorial</a>
-                    <div className='relative overflow-x-hidden overflow-y-hidden forsc w-[95%] ml-7 py-1 break-words'>
-                        <button onClick={() => handleClick(-50)} className='absolute top-0 left-0 px-4  bg-white z-10 shadow-md  h-full fsc'>
+                    <div className='relative overflow-x-hidden overflow-y-hidden forsc lg:w-[95%] w-100 lg:ml-7 ml-0 py-1 break-words'>
+                        <button onClick={() => handleClick(-100)} className='text-[#767676] hover:text-slate-800 absolute top-0 left-0 px-4  bg-white z-10 shadow-md  h-full fsc'>
                             <MdOutlineKeyboardArrowLeft size={30} />
                         </button>
-                        <button onClick={() => handleClick(50)} className='absolute top-0 right-0 px-4 bg-white z-10 shadow-md  h-full fscc'>
+                        <button onClick={() => handleClick(100)} className='text-[#767676] hover:text-slate-800 absolute top-0 right-0 px-4 bg-white z-10 shadow-md  h-full fscc'>
                             <MdOutlineKeyboardArrowRight size={30} />
                         </button>
                         <div className='w-full overflow-y-hidden relative py-2 items-center forsc scroll-smooth overflow-x-scroll whitespace-nowrap' ref={scrollPoint}>
-                            <a className='inline ml-14 sthj'>Wallpapers</a>
-                            <a className='inline mx-4 sthj'>3D Renders</a>
-                            <a className='inline mx-4 sthj'>Travels</a>
-                            <a className='inline mx-4 sthj'>Nature</a>
-                            <a className='inline mx-4 sthj'>Street Photography</a>
-                            <a className='inline mx-4 sthj'>Experimental</a>
-                            <a className='inline mx-4 sthj'>Textures and Patterns</a>
-                            <a className='inline mx-4 sthj'>Animals</a>
-                            <a className='inline mx-4 sthj'>Architecture and Interiors</a>
-                            <a className='inline mx-4 sthj'>Fashion and Beauty</a>
-                            <a className='inline mx-4 sthj'>Film</a>
-                            <a className='inline mx-4 sthj'>Food & Drink</a>
-                            <a className='inline mx-4 sthj'>People</a>
-                            <a className='inline mx-4 sthj'>Spirituality</a>
-                            <a className='inline mx-4 sthj'>Business and Work</a>
-                            <a className='inline mx-4 sthj'>Athletics</a>
-                            <a className='inline mx-4 sthj'>Health & Wellness</a>
-                            <a className='inline mx-4 sthj'>Current Events</a>
-                            <a className='inline mr-14 sthj'>Art & Culture</a>
+                            <a className='inline ml-14 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Wallpapers</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>3D Renders</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Travels</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Nature</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Street Photography</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Experimental</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Textures and Patterns</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Animals</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Architecture and Interiors</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Fashion and Beauty</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Film</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Food & Drink</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>People</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Spirituality</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Business and Work</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Athletics</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Health & Wellness</a>
+                            <a className='inline mx-4 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Current Events</a>
+                            <a className='inline mr-14 sthj text-[#767676] hover:text-slate-800 cursor-pointer'>Art & Culture</a>
 
                         </div>
                     </div>

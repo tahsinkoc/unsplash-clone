@@ -3,10 +3,16 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Navbar from '../components/navbar/Navbar'
 import styles from '@/styles/Home.module.css'
-
+import { BsSearch } from 'react-icons/bs'
 const inter = Inter({ subsets: ['latin'] })
+import Gallery from '@/components/gallery/Gallery'
+import { useState } from 'react'
 
 export default function Home() {
+  const [isSearch, setSearch] = useState(false)
+  const handleFocus = (el) => {
+    setSearch(el)
+  }
   return (
     <>
       {/* <Head>
@@ -19,6 +25,31 @@ export default function Home() {
 
       </main> */}
       <Navbar />
+      <div className='w-full h-[37.2rem] rata'>
+        <div className='w-full h-full flex items-center justify-center bg-[rgba(0,0,0,.5)] flex-col'>
+          <div className='w-[930px] mx-auto px-5'>
+            <h3 className='text-[2.875rem] font-bold text-white'>Unsplash</h3>
+            <p className='mt-[1rem] text-[1.2rem] text-white'>
+              The internet’s source for visuals.
+            </p>
+            <p className='text-[1.2rem] text-white'>
+              Powered by creators everywhere.
+            </p>
+          </div>
+          <div className='px-1 w-[930px] lg:block hidden'>
+            <div className='relative ml-4 mt-4'>
+              <button className='absolute top-[19px] text-slate-600 font-bold left-3 text-[1.3rem]'><BsSearch /></button>
+              <input className='bg-white px-11 w-full border outline-none py-4 rounded-md' onBlur={() => handleFocus(false)} onFocus={() => handleFocus(true)} type="text" placeholder='Search' />
+              {isSearch ? <div className='z-0 border my-2 p-[.7rem] absolute rounded-sm w-full bg-white shadow-md'>true</div> : <div className='hidden'>false</div>}
+            </div>
+            <p className='text-white px-4 my-2'>Trending: flower, wallpapers, backgrounds, happy, love</p>
+
+          </div>
+        </div>
+        {/* <img src="/bg/marek-piwnicki-Yg7PWiIFqWM-unsplash.jpg" alt="" className='h-full w-full bg-cover' /> */}
+      </div>
+      <Gallery />
+
     </>
   )
 }

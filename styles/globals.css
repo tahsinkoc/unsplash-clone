@@ -16,4 +16,32 @@
 
 }
 
-.sthj {}
+.rata {
+  background-image: url(../public//bg/nunzio-guerrera-PvtCOQP2cjg-unsplash.jpg);
+  background-repeat: no-repeat;
+}
+
+.galgal {
+  line-height: 0;
+  -webkit-column-count: 3;
+  /* split it into 5 columns */
+  -webkit-column-gap: 25px;
+  /* give it a 5px gap between columns */
+  -moz-column-count: 3;
+  -moz-column-gap: 25px;
+  column-count: 3;
+  column-gap: 25px;
+}
+
+.imgg {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .galgal {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
