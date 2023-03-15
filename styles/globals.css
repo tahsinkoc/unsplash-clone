@@ -76,6 +76,10 @@
   transition: .1s background ease-in-out;
 }
 
+.svv::-webkit-scrollbar {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .galgal {
     -moz-column-count: 1;
