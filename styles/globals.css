@@ -33,9 +33,47 @@
   column-gap: 25px;
 }
 
+
+
 .imgg {
   width: 100%;
   height: auto;
+}
+
+/* .imgg:hover~.zzs {
+  top: 75px;
+} */
+.zzs:hover {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.zzs:hover~.sspg {
+  top: 0;
+}
+
+.zzs:hover~.sspgg {
+  bottom: 0;
+}
+
+.sspg:hover {
+  top: 0;
+}
+
+.sspg:hover .sspgg {
+  bottom: 0;
+}
+
+.sspgg:hover {
+  bottom: 0;
+}
+
+.sspgg:hover .sspg {
+  top: 0;
+}
+
+.zzs,
+.sspg {
+  transition: .1s background ease-in-out;
 }
 
 @media (max-width: 1024px) {
