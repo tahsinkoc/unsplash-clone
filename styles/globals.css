@@ -21,6 +21,12 @@
   background-repeat: no-repeat;
 }
 
+.rataa {
+  background-image: url(../public/bg/huzaifa-ginwala-TkdUF57nioQ-unsplash.jpg);
+  /* background-image: url(../public//bg/tide_trasher_x-qMi4L1sCcM8-unsplash.jpg); */
+  background-repeat: no-repeat;
+}
+
 .galgal {
   line-height: 0;
   -webkit-column-count: 3;
