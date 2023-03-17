@@ -4,9 +4,11 @@ import React from 'react'
 import { useState, useRef } from 'react'
 import { HiOutlineDotsHorizontal, HiLocationMarker, HiPhotograph } from 'react-icons/hi'
 import { AiOutlineMail, AiOutlineClose, AiFillCheckCircle, AiFillHeart } from 'react-icons/ai'
-import { IoMdPhotos } from 'react-icons/io'
+import { IoMdPhotos, IoIosStats } from 'react-icons/io'
+import { MdModeEditOutline } from 'react-icons/md'
 import Gallery from '@/components/gallery/Gallery'
 import Collection from '@/components/collection/Collection'
+import Stats from '@/components/stats/Stats'
 function index() {
     const [Report, setReport] = useState(false)
     const [Msg, setMsg] = useState(false)
@@ -15,11 +17,13 @@ function index() {
     const refO = useRef(null)
     const refS = useRef(null)
     const refT = useRef(null)
+    const refF = useRef(null)
 
     function refHandler(el) {
         refO.current.style.borderColor = 'transparent'
         refT.current.style.borderColor = 'transparent'
         refS.current.style.borderColor = 'transparent'
+        refF.current.style.borderColor = 'transparent'
         el.current.style.borderColor = 'black'
     }
 
@@ -27,6 +31,7 @@ function index() {
         <Gallery />,
         <Gallery />,
         <Collection />,
+        <Stats />
     ])
 
     const [Rendered, setRendered] = useState(DataList[0])
@@ -44,32 +49,9 @@ function index() {
                                 David Williams
                             </h2>
                             <div className='relative ml-4'>
-                                <button onClick={() => setReport(!Report)} className='px-3 py-[6px] rounded text-[#767676] bg-white text-[1rem] mr-2 border-[1px] border-gray-400 shadow-md flex items-center justify-between'>
-                                    <HiOutlineDotsHorizontal />
-                                </button>
-                                {
-                                    Report ? <div className='right-2 p-2 my-2 w-36 rounded border-gray-400 border absolute bg-white text-[#767676] z-50 flex flex-col'>
-                                        <a className='my-2 cursor-pointer  flex items-start text-start'>Follow David</a>
-                                        <a className='my-2 cursor-pointer '>Share Profile</a>
-                                        <a className='my-2 cursor-pointer text-red-600'>Report</a>
-                                    </div> : <></>
-                                }
-                            </div>
-                            <div className='relative'>
-                                <button onClick={() => setOpen(true)} className='px-3 py-[6px] rounded text-[#767676] bg-white text-[1rem] mr-2 border-[1px] border-gray-400 shadow-md flex items-center justify-between'>
-                                    <AiOutlineMail />
-                                </button>
-                                {/* {
-                                    Report ? <div className='right-2 p-2 my-2 w-36 rounded border-gray-400 border absolute bg-white text-[#767676] z-50 flex flex-col'>
-                                        <a className='my-2 cursor-pointer  flex items-start text-start'>Follow David</a>
-                                        <a className='my-2 cursor-pointer '>Share Profile</a>
-                                        <a className='my-2 cursor-pointer text-red-600'>Report</a>
-                                    </div> : <></>
-                                } */}
-                            </div>
-                            <div className='relative'>
-                                <button onClick={() => setOpen(true)} className='px-3 py-[3px] rounded text-white bg-blue-600 text-[1rem] mr-2 border-[1px] border-gray-400 shadow-md flex items-center justify-between'>
-                                    Hire
+                                <button onClick={() => setOpen(true)} className='px-3 py-[3px] rounded text-[#767676] bg-white text-[1rem] mr-2 border border-[#767676 shadow-md flex items-center justify-between'>
+                                    <MdModeEditOutline />
+                                    <p className='mx-2 text-[#767676]'>Edit profile</p>
                                 </button>
                                 {/* {
                                     Report ? <div className='right-2 p-2 my-2 w-36 rounded border-gray-400 border absolute bg-white text-[#767676] z-50 flex flex-col'>
@@ -111,6 +93,12 @@ function index() {
                     <IoMdPhotos className='lg:block hidden' />
                     <p className='mx-2'>
                         Collections 1
+                    </p>
+                </button>
+                <button ref={refF} onClick={() => { refHandler(refF), setRendered(DataList[3]) }} className='px-4 py-4 flex items-center border-b-2 mx-2'>
+                    <IoIosStats className='lg:block hidden' />
+                    <p className='mx-2'>
+                        Stats
                     </p>
                 </button>
             </div>
