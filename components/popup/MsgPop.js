@@ -7,11 +7,14 @@ function MsgPop({ isOpen, setOpen, data }) {
     return (
         <>
             {
-                isOpen ? <div className='w-full h-screen bg-[rgba(0,0,0,.5)] fixed z-50 top-0 flex items-center justify-center'>
-                    <button className='fixed left-4 top-4 text-white text-[2rem]' onClick={() => setOpen(false)}>
+                isOpen ? <div className='w-full h-screen bg-[rgba(0,0,0,.5)] fixed z-[999] top-0 flex items-center justify-center overflow-y-auto'>
+                    <button className='fixed left-4 top-4 lg:text-white text-black text-[2rem]' onClick={() => setOpen(false)}>
                         <AiOutlineClose />
                     </button>
-                    <div className='w-[35rem] px-4 py-3 bg-white rounded shadow-sm border mx-auto relative'>
+                    <div className='lg:w-[35rem] w-full lg:h-auto h-full px-4 py-3 bg-white rounded shadow-sm border mx-auto relative'>
+                        <button className='fixed right-4 top-4 lg:text-white text-black text-[2rem]' onClick={() => setOpen(false)}>
+                            <AiOutlineClose />
+                        </button>
                         <div className='flex items-center'>
                             <img src="/pp/pp2.webp" className='w-20 h-20 rounded-full' alt="" />
                             <h2 className='font-bold text-[2.1rem] mx-4'>
