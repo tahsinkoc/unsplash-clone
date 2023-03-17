@@ -27,6 +27,10 @@
   background-repeat: no-repeat;
 }
 
+.imagine {
+  background-image: url(../public/bg/huzaifa-ginwala-TkdUF57nioQ-unsplash.jpg);
+}
+
 .galgal {
   line-height: 0;
   -webkit-column-count: 3;
